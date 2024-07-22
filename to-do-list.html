@@ -1,0 +1,35 @@
+<!--디자인참고:https://choboit.tistory.com/142-->
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>To-Do-List</title>
+	<link rel="stylesheet" type="text/css" href="styles/to-do-list.css"/>
+	<script src="scripts/to-do-list.js"></script>
+</head>
+<body onload="clock()">
+	<!--<form action="" method="post">--><!--왜 form태그를 쓰면 to-do-list에 저장이 안되는지 모르겠음-->
+		<div id="container">
+			<div id="clockBox">
+				<div id="date">
+					날짜 loading
+				</div>
+				<div id="time">
+					시간 loading
+				</div>
+			</div>
+			<div id="to-do-listBox">
+				<h3>Todo<h3>
+				<div id="list">
+					<!--table형태로 바꾸어 행열 이쁘게 맞춰주기-->
+				</div>
+				<div id="addList">
+					<input type="text" id="content"/>
+					<button id="add" onclick="addList()"><img src="images/add.png"></button>
+				</div>
+			</div>
+		</div>
+	<!--</form>-->
+</body>
+</html>
