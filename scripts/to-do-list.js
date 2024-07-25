@@ -25,13 +25,26 @@ function addList(){
 
 	let list = document.getElementById("list");
 	let content = document.getElementById("content").value;
-	let count = list.childElementCount;
 
-	let newDiv = document.createElement('div');
-	let text = document.createTextNode(`${count+1}. ${content}`);
+	let listBox = document.getElementById("listBox");
+	let count = listBox.childElementCount+1;
 
-	list.appendChild(newDiv);
-	newDiv.appendChild(text);
+	let tr = document.createElement('tr');
+
+	let td_num = document.createElement('td');
+	td_num.className = 'listNum';
+	let text_num = document.createTextNode(`${count} `);
+
+	let td_text = document.createElement('td');
+	td_text.className = 'listContent';
+	let text_content = document.createTextNode(`${content}`);
+
+	listBox.appendChild(tr);
+	tr.appendChild(td_num);
+	tr.appendChild(td_text);
+	td_num.appendChild(text_num);
+	td_text.appendChild(text_content);
+	
 	document.getElementById("content").value="";
 }
 
