@@ -26,24 +26,28 @@ function addList(){
 	let list = document.getElementById("list");
 	let content = document.getElementById("content").value;
 
-	let listBox = document.getElementById("listBox");
-	let count = listBox.childElementCount+1;
+	if(content == ""){
+		alert("내용을 입력해주세요");
+	} else {
+		let listBox = document.getElementById("listBox");
+		let count = listBox.childElementCount+1;
 
-	let tr = document.createElement('tr');
+		let tr = document.createElement('tr');
 
-	let td_num = document.createElement('td');
-	td_num.className = 'listNum';
-	let text_num = document.createTextNode(`${count} `);
+		let td_num = document.createElement('td');
+		td_num.className = 'listNum';
+		let text_num = document.createTextNode(`${count} `);
 
-	let td_text = document.createElement('td');
-	td_text.className = 'listContent';
-	let text_content = document.createTextNode(`${content}`);
+		let td_text = document.createElement('td');
+		td_text.className = 'listContent';
+		let text_content = document.createTextNode(`${content}`);
 
-	listBox.appendChild(tr);
-	tr.appendChild(td_num);
-	tr.appendChild(td_text);
-	td_num.appendChild(text_num);
-	td_text.appendChild(text_content);
+		listBox.appendChild(tr);
+		tr.appendChild(td_num);
+		tr.appendChild(td_text);
+		td_num.appendChild(text_num);
+		td_text.appendChild(text_content);
+	}
 	
 	document.getElementById("content").value="";
 }
