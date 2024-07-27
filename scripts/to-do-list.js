@@ -42,13 +42,30 @@ function addList(){
 		td_text.className = 'listContent';
 		let text_content = document.createTextNode(`${content}`);
 
+		let td_icon = document.createElement('td');
+		td_icon.className = 'delete';
+		let image = document.createElement('img');
+		image.src = 'images/delete.png';
+		/*image.addEventListener('click', deleteList());*//*오류발생*/
+
 		listBox.appendChild(tr);
 		tr.appendChild(td_num);
 		tr.appendChild(td_text);
+		tr.appendChild(td_icon);
 		td_num.appendChild(text_num);
 		td_text.appendChild(text_content);
+		td_icon.appendChild(image);
 	}
 	
 	document.getElementById("content").value="";
+}
+
+function deleteList() {
+	alert("deleteList실행");
+
+	/*let table = document.getElementById("listBox");
+	let rowList = table.rows;
+	alert(rowList[0]);
+	rowList[0].remove();*/
 }
 
