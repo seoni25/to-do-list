@@ -1,6 +1,7 @@
 setInterval(clock, 1000);
 
 function clock(){
+	/*저번 피드백: 중복되는 코드들 처리하는 함수 필요*/
 	let date = new Date();
 
 	let year = date.getFullYear();
